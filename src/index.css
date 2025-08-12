@@ -125,6 +125,10 @@ section>span.lost::before {
   font-size: 1.2rem;
 }
 
+.word > span.missed{
+  color: #D02B2B;
+}
+
 .keyboard {
   display: flex;
   flex-wrap: wrap;
