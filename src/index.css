@@ -1,13 +1,161 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Karla", sans-serif;
+  flex-direction: column;
+  background-color: #282726;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main{
+  width: 600px;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: auto;
+  text-align: center;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header>h1{
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #F9F4DA;
+}
+
+.header > p{
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #8E8E8E;
+}
+
+section.status-message{
+  color: #F9F4DA;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 6px 0;
+  margin: auto;
+  display: block;
+  width: 100%;
+  min-height: 65px;
+}
+
+section.status-message.won {
+  background-color: #10A95B;
+}
+
+section.status-message.lost {
+  background-color: red;
+}
+
+.status-message>h2{
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 1.125rem;
+}
+
+.status-message>p{
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+section.languages-section{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 350px;
+  margin: 50px auto;
+}
+
+section>span.chip{
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+
+section>span.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 2px;
+}
+
+.word > span{
+  width: 28px;
+  height: 20px;
+  background-color: #323232;
+  color: #F9F4DA;
+  border-bottom: 1px solid #F9F4DA;
+  font-weight: 600;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-self: stretch;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 50px; 
+}
+
+.keyboard>button{
+  background-color: #FCBA29;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  color: #1E1E1E;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;;
+}
+
+
+.keyboard>button.correct {
+  background-color: #10A95B;
+}
+
+.keyboard>button.wrong {
+  background-color: #D02B2B;
+}
+
+.newgame-btn{
+  background-color: #11B5E5;
+  border: 1px solid #D7D7D7;
+  color: #1E1E1E;
+  width: auto;
+  padding: 12px 6px;
+  align-self: center;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  font-family: "Karla", sans-serif;
+  justify-content: center;
+  text-align: center;
 }
