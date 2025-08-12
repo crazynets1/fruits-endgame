@@ -37,7 +37,11 @@ function App() {
   })
 
   const wordElements = currentWord.split('').map(letter => {
-    return <span>{guessedLetters.includes(letter) ? letter.toUpperCase() : ''}</span>
+    const revealMissedLetter = isGameLost || guessedLetters.includes(letter)
+    const styles = clsx({
+      missed: isGameLost && !guessedLetters.includes(letter)
+    })
+    return (<span className={styles}>{revealMissedLetter ? letter.toUpperCase() : ''}</span>)
   })
   
   function renderStatus() {
@@ -99,7 +103,7 @@ const keyboardElements =
     <main>
       {isGameWon && 
       <Confetti
-      numberOfPieces={500}
+      numberOfPieces={1000}
       recycle={false}
       />}
       <section className='header'>
