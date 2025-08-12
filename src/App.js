@@ -103,7 +103,7 @@ const keyboardElements =
         world safe from Assembly!
       </p>
     </section>
-    <section className={className}>
+    <section className={className} aria-live="polite">
       {renderStatus()}
     </section>
     <section className='languages-section'>
