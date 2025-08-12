@@ -2,10 +2,11 @@ import React from "react"
 import { clsx } from 'clsx'
 import './App.css';
 import languages from './fruits';
+import { getRandomWord } from "./utils";
 
 function App() {
   //state values
-  const [currentWord] = React.useState('react')
+  const [currentWord, setCurrentWord] = React.useState(() => getRandomWord())
   const [guessedLetters, setGuessedLetters] = React.useState([])
 
   //derived values
@@ -82,6 +83,11 @@ const keyboardElements =
     )
   })
 
+  function renderNewGame() {
+    setGuessedLetters([])
+    setCurrentWord(getRandomWord())
+  }
+
   return (
     <main>
       <section className='header'>
@@ -103,7 +109,7 @@ const keyboardElements =
     <section className='keyboard'>
       {keyboardElements}
     </section>
-    {isGameOver && <button className='newgame-btn'>New Game</button>}
+    {isGameOver && <button className='newgame-btn' onClick={() => renderNewGame()}>New Game</button>}
     </main>
   )
 }
