@@ -109,7 +109,15 @@ const keyboardElements =
     <section className='keyboard'>
       {keyboardElements}
     </section>
-    {isGameOver && <button className='newgame-btn' onClick={() => renderNewGame()}>New Game</button>}
+    {
+      <button 
+      className='newgame-btn' 
+      onClick={() => renderNewGame()} 
+      disabled={!isGameOver}
+      aria-label="new game button">
+        New Game
+      </button>
+    }
     </main>
   )
 }
