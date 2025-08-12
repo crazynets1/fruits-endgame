@@ -3,6 +3,7 @@ import { clsx } from 'clsx'
 import './App.css';
 import languages from './fruits';
 import { getRandomWord, getFarewellText } from "./utils";
+import Confetti from "react-confetti"
 
 function App() {
   //state values
@@ -96,6 +97,11 @@ const keyboardElements =
 
   return (
     <main>
+      {isGameWon && 
+      <Confetti
+      numberOfPieces={500}
+      recycle={false}
+      />}
       <section className='header'>
       <h1>Fruits: Endgame</h1>
       <p>
