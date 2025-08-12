@@ -36,20 +36,6 @@ function App() {
     return <span>{guessedLetters.includes(letter) ? letter.toUpperCase() : ''}</span>
   })
   
-  const keyboardElements = 
-        alphabet.split('').map(letter => {
-          const isGuessed = guessedLetters.includes(letter)
-          const isCorrect = isGuessed && currentWord.includes(letter)
-          const isWrong = isGuessed && !currentWord.includes(letter)
-          const styles = clsx({
-            correct: isCorrect,
-            wrong: isWrong
-          })
-
-          return <button onClick={() => addGuessed(letter)} key={letter.name} className={styles}>
-                  {letter.toUpperCase()}
-                </button>
-        })
   function renderStatus() {
     if(!isGameOver) {
       return null
@@ -70,10 +56,30 @@ function App() {
       )
     }
   }
-
   const className = clsx('status-message', {
     won: isGameWon,
     lost:isGameLost
+  })
+
+const keyboardElements = 
+        alphabet.split('').map(letter => {
+          const isGuessed = guessedLetters.includes(letter)
+          const isCorrect = isGuessed && currentWord.includes(letter)
+          const isWrong = isGuessed && !currentWord.includes(letter)
+          const styles = clsx({
+            correct: isCorrect,
+            wrong: isWrong
+          })
+
+      return(
+        <button 
+        onClick={() => addGuessed(letter)} 
+        key={letter.name} className={styles} 
+        disabled={isGameOver}
+        aria-label={letter}>
+          {letter.toUpperCase()}
+        </button>
+    )
   })
 
   return (
