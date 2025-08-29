@@ -27,6 +27,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - **`clsx for conditional class names`**
 - **`react-confetti for win animation`**
 
+Customization
+- Add or remove words in `words.js`.
+- Change or add programming languages in `fruits.js`.
+- Adjust farewell messages in `utils.js`.
+
 ## Available Scripts
 In the project directory, you can run:
 
