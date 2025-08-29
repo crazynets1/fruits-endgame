@@ -15,19 +15,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - If you use up all your attempts, **you lose** and **Assembly** is the only language left.
 
 #### Features
-- `Colorful Language Chips:` Each programming language is represented by a colored chip. Incorrect guesses "eliminate" a language.
-- `On-Screen Keyboard:` Click letters to make guesses. Used letters are color-coded for correctness.
-- `Confetti Animation:` Celebrate your win with confetti!
-- `Dynamic Farewell Messages:` Each eliminated language gets a random farewell message.
-- `Responsive UI:` The game is playable on desktop and mobile browsers.
+`Colorful Language Chips:` Each programming language is represented by a colored chip. Incorrect guesses "eliminate" a language.\
+`On-Screen Keyboard:` Click letters to make guesses. Used letters are color-coded for correctness.\
+`Confetti Animation:` Celebrate your win with confetti!\
+`Dynamic Farewell Messages:` Each eliminated language gets a random farewell message.\
+`Responsive UI:` The game is playable on desktop and mobile browsers.
 
 #### Technologies Used
-- **`React`**
-- **`CSS`**
-- **`clsx for conditional class names`**
-- **`react-confetti for win animation`**
+**`React`**\
+**`Javascript`**\
+**`CSS`**\
+**`HTML`**\
+**`clsx`** for conditional class names.\
+**`react-confetti`** for win animation.
 
-Customization
+#### Customization
 - Add or remove words in `words.js`.
 - Change or add programming languages in `fruits.js`.
 - Adjust farewell messages in `utils.js`.
