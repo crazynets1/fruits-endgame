@@ -1,9 +1,9 @@
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Fruits: Endgame
+## Tenzies: Endgame
  ### Overview
- Tenzies: Endgame is a word-guessing game built with React. The goal is to guess a hidden word which is randomly generated, letter by    letter, before you run out of attempts. Each incorrect guess eliminates a programming language from the "languages" list. If you lose all but one language, you lose the game and are humorously told to "start learning Assembly!"
+ Tenzies: Endgame is a word-guessing game built with React. The goal is to guess a hidden word which is randomly generated, letter by letter, before you run out of attempts. Each incorrect guess eliminates a programming language from the "languages" list. If you lose all but one language, you lose the game and are humorously told to "start learning Assembly!"
 
   #### How to Play
 - A random word is selected at the start of each game **(randomly generated)**.
