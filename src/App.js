@@ -107,7 +107,7 @@ const keyboardElements =
       recycle={false}
       />}
       <section className='header'>
-      <h1>Fruits: Endgame</h1>
+      <h1>Tenzies: Endgame</h1>
       <p>
         Guess the word in under 8 attempts to keep the programming 
         world safe from Assembly!
